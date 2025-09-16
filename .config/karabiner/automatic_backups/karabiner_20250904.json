@@ -1,0 +1,984 @@
+{
+    "profiles": [
+        {
+            "complex_modifications": {
+                "rules": [
+                    {
+                        "description": "Capslock赋能Hyper",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "caps_lock",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "right_shift",
+                                        "modifiers": ["right_command", "right_control", "right_option"]
+                                    }
+                                ],
+                                "to_if_alone": [{ "key_code": "caps_lock" }],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "escape",
+                                    "modifiers": {
+                                        "mandatory": ["right_command", "right_control", "right_option", "right_shift"],
+                                        "optional": ["caps_lock"]
+                                    }
+                                },
+                                "to": [{ "key_code": "caps_lock" }],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "spacebar",
+                                    "modifiers": { "mandatory": ["right_command", "right_control", "right_option", "right_shift"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "spacebar",
+                                        "modifiers": ["left_control"]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Hyper => 光标移动",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "e",
+                                    "modifiers": { "mandatory": ["right_command", "right_control", "right_option", "right_shift"] }
+                                },
+                                "to": [{ "key_code": "up_arrow" }],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "d",
+                                    "modifiers": { "mandatory": ["right_command", "right_control", "right_option", "right_shift"] }
+                                },
+                                "to": [{ "key_code": "down_arrow" }],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "s",
+                                    "modifiers": { "mandatory": ["right_command", "right_control", "right_option", "right_shift"] }
+                                },
+                                "to": [{ "key_code": "left_arrow" }],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "f",
+                                    "modifiers": { "mandatory": ["right_command", "right_control", "right_option", "right_shift"] }
+                                },
+                                "to": [{ "key_code": "right_arrow" }],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "a",
+                                    "modifiers": { "mandatory": ["right_command", "right_control", "right_option", "right_shift"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "left_arrow",
+                                        "modifiers": ["left_option"]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "g",
+                                    "modifiers": { "mandatory": ["right_command", "right_control", "right_option", "right_shift"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "right_arrow",
+                                        "modifiers": ["left_option"]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com\\.apple\\.Terminal$",
+                                            "^com\\.googlecode\\.iterm2$",
+                                            "^com\\.jetbrains\\.(.*)$"
+                                        ],
+                                        "type": "frontmost_application_unless"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "p",
+                                    "modifiers": { "mandatory": ["right_command", "right_control", "right_option", "right_shift"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "left_arrow",
+                                        "modifiers": ["left_command"]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com\\.apple\\.Terminal$",
+                                            "^com\\.googlecode\\.iterm2$",
+                                            "^com\\.jetbrains\\.(.*)$"
+                                        ],
+                                        "type": "frontmost_application_unless"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "semicolon",
+                                    "modifiers": { "mandatory": ["right_command", "right_control", "right_option", "right_shift"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "right_arrow",
+                                        "modifiers": ["left_command"]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com\\.apple\\.Terminal$",
+                                            "^com\\.googlecode\\.iterm2$",
+                                            "^com\\.jetbrains\\.(.*)$"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "p",
+                                    "modifiers": { "mandatory": ["right_command", "right_control", "right_option", "right_shift"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "a",
+                                        "modifiers": ["left_control"]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com\\.apple\\.Terminal$",
+                                            "^com\\.googlecode\\.iterm2$",
+                                            "^com\\.jetbrains\\.(.*)$"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "semicolon",
+                                    "modifiers": { "mandatory": ["right_command", "right_control", "right_option", "right_shift"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "e",
+                                        "modifiers": ["left_control"]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^app\\.cyan\\.taio$",
+                                            "^com\\.agiletortoise\\.Drafts-OSX$"
+                                        ],
+                                        "type": "frontmost_application_unless"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "p",
+                                    "modifiers": { "mandatory": ["left_command", "right_command", "right_control", "right_option", "right_shift"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "left_arrow",
+                                        "modifiers": ["left_command", "fn"]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^app\\.cyan\\.taio$",
+                                            "^com\\.agiletortoise\\.Drafts-OSX$"
+                                        ],
+                                        "type": "frontmost_application_unless"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "semicolon",
+                                    "modifiers": { "mandatory": ["left_command", "right_command", "right_control", "right_option", "right_shift"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "right_arrow",
+                                        "modifiers": ["left_command", "fn"]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^app\\.cyan\\.taio$",
+                                            "^com\\.agiletortoise\\.Drafts-OSX$"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "p",
+                                    "modifiers": { "mandatory": ["left_command", "right_command", "right_control", "right_option", "right_shift"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "up_arrow",
+                                        "modifiers": ["left_command"]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^app\\.cyan\\.taio$",
+                                            "^com\\.agiletortoise\\.Drafts-OSX$"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "semicolon",
+                                    "modifiers": { "mandatory": ["left_command", "right_command", "right_control", "right_option", "right_shift"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "down_arrow",
+                                        "modifiers": ["left_command"]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Hyper => 光标选中",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "i",
+                                    "modifiers": { "mandatory": ["right_command", "right_control", "right_option", "right_shift"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "up_arrow",
+                                        "modifiers": ["left_shift"]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "k",
+                                    "modifiers": { "mandatory": ["right_command", "right_control", "right_option", "right_shift"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "down_arrow",
+                                        "modifiers": ["left_shift"]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "j",
+                                    "modifiers": { "mandatory": ["right_command", "right_control", "right_option", "right_shift"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "left_arrow",
+                                        "modifiers": ["left_shift"]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "l",
+                                    "modifiers": { "mandatory": ["right_command", "right_control", "right_option", "right_shift"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "right_arrow",
+                                        "modifiers": ["left_shift"]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "h",
+                                    "modifiers": { "mandatory": ["right_command", "right_control", "right_option", "right_shift"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "left_arrow",
+                                        "modifiers": ["left_option", "left_shift"]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "n",
+                                    "modifiers": { "mandatory": ["right_command", "right_control", "right_option", "right_shift"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "right_arrow",
+                                        "modifiers": ["left_option", "left_shift"]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "y",
+                                    "modifiers": { "mandatory": ["right_command", "right_control", "right_option", "right_shift"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "up_arrow",
+                                        "modifiers": ["left_option"]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "b",
+                                    "modifiers": { "mandatory": ["right_command", "right_control", "right_option", "right_shift"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "down_arrow",
+                                        "modifiers": ["left_option"]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "u",
+                                    "modifiers": { "mandatory": ["right_command", "right_control", "right_option", "right_shift"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "left_arrow",
+                                        "modifiers": ["left_command", "left_shift"]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "o",
+                                    "modifiers": { "mandatory": ["right_command", "right_control", "right_option", "right_shift"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "right_arrow",
+                                        "modifiers": ["left_command", "left_shift"]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com\\.jetbrains\\.(.*)$"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "u",
+                                    "modifiers": { "mandatory": ["left_command", "right_command", "right_control", "right_option", "right_shift"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "left_arrow",
+                                        "modifiers": ["left_command", "left_shift", "fn"]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com\\.jetbrains\\.(.*)$"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "o",
+                                    "modifiers": { "mandatory": ["left_command", "right_command", "right_control", "right_option", "right_shift"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "right_arrow",
+                                        "modifiers": ["left_command", "left_shift", "fn"]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com\\.jetbrains\\.(.*)$"
+                                        ],
+                                        "type": "frontmost_application_unless"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "u",
+                                    "modifiers": { "mandatory": ["left_command", "right_command", "right_control", "right_option", "right_shift"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "up_arrow",
+                                        "modifiers": ["left_command", "left_shift"]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com\\.jetbrains\\.(.*)$"
+                                        ],
+                                        "type": "frontmost_application_unless"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "o",
+                                    "modifiers": { "mandatory": ["left_command", "right_command", "right_control", "right_option", "right_shift"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "down_arrow",
+                                        "modifiers": ["left_command", "left_shift"]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "comma",
+                                    "modifiers": { "mandatory": ["right_command", "right_control", "right_option", "right_shift"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "left_arrow",
+                                        "modifiers": ["left_option"]
+                                    },
+                                    {
+                                        "key_code": "right_arrow",
+                                        "modifiers": ["left_option", "left_shift"]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "comma",
+                                    "modifiers": { "mandatory": ["left_command", "right_command", "right_control", "right_option", "right_shift"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "left_arrow",
+                                        "modifiers": ["left_command"]
+                                    },
+                                    {
+                                        "key_code": "right_arrow",
+                                        "modifiers": ["left_command", "left_shift"]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^app\\.cyan\\.taio$",
+                                            "^com\\.agiletortoise\\.Drafts-OSX$"
+                                        ],
+                                        "type": "frontmost_application_unless"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "i",
+                                    "modifiers": { "mandatory": ["left_command", "right_command", "right_control", "right_option", "right_shift"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "up_arrow",
+                                        "modifiers": ["left_option", "left_shift"]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^app\\.cyan\\.taio$"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "i",
+                                    "modifiers": { "mandatory": ["left_command", "right_command", "right_control", "right_option", "right_shift"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "up_arrow",
+                                        "modifiers": ["left_command", "left_option"]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com\\.agiletortoise\\.Drafts-OSX$"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "i",
+                                    "modifiers": { "mandatory": ["left_command", "right_command", "right_control", "right_option", "right_shift"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "up_arrow",
+                                        "modifiers": ["left_option"]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^app\\.cyan\\.taio$",
+                                            "^com\\.agiletortoise\\.Drafts-OSX$"
+                                        ],
+                                        "type": "frontmost_application_unless"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "k",
+                                    "modifiers": { "mandatory": ["left_command", "right_command", "right_control", "right_option", "right_shift"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "down_arrow",
+                                        "modifiers": ["left_option", "left_shift"]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^app\\.cyan\\.taio$"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "k",
+                                    "modifiers": { "mandatory": ["left_command", "right_command", "right_control", "right_option", "right_shift"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "down_arrow",
+                                        "modifiers": ["left_command", "left_option"]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com\\.agiletortoise\\.Drafts-OSX$"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "k",
+                                    "modifiers": { "mandatory": ["left_command", "right_command", "right_control", "right_option", "right_shift"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "down_arrow",
+                                        "modifiers": ["left_option"]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com\\.jetbrains\\.(.*)$",
+                                            "^com\\.microsoft\\.VSCode$"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "r",
+                                    "modifiers": { "mandatory": ["left_option", "right_command", "right_control", "right_option", "right_shift"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "f6",
+                                        "modifiers": ["left_shift"]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Hyper => 文本删除",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "w",
+                                    "modifiers": { "mandatory": ["right_command", "right_control", "right_option", "right_shift"] }
+                                },
+                                "to": [{ "key_code": "delete_or_backspace" }],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "r",
+                                    "modifiers": { "mandatory": ["right_command", "right_control", "right_option", "right_shift"] }
+                                },
+                                "to": [{ "key_code": "delete_forward" }],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "w",
+                                    "modifiers": { "mandatory": ["left_command", "right_command", "right_control", "right_option", "right_shift"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "delete_or_backspace",
+                                        "modifiers": ["left_option"]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "r",
+                                    "modifiers": { "mandatory": ["left_command", "right_command", "right_control", "right_option", "right_shift"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "delete_forward",
+                                        "modifiers": ["left_option"]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "open_bracket",
+                                    "modifiers": { "mandatory": ["right_command", "right_control", "right_option", "right_shift"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "left_arrow",
+                                        "modifiers": ["left_command", "left_shift"]
+                                    },
+                                    { "key_code": "delete_or_backspace" }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "slash",
+                                    "modifiers": { "mandatory": ["right_command", "right_control", "right_option", "right_shift"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "right_arrow",
+                                        "modifiers": ["left_command", "left_shift"]
+                                    },
+                                    { "key_code": "delete_or_backspace" }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^app\\.cyan\\.taio$",
+                                            "^com\\.agiletortoise\\.Drafts-OSX$"
+                                        ],
+                                        "type": "frontmost_application_unless"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "delete_or_backspace",
+                                    "modifiers": { "mandatory": ["right_command", "right_control", "right_option", "right_shift"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "delete_or_backspace",
+                                        "modifiers": ["left_command"]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^app\\.cyan\\.taio$",
+                                            "^com\\.agiletortoise\\.Drafts-OSX$"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "delete_or_backspace",
+                                    "modifiers": { "mandatory": ["right_command", "right_control", "right_option", "right_shift"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "right_arrow",
+                                        "modifiers": ["left_command"]
+                                    },
+                                    {
+                                        "key_code": "left_arrow",
+                                        "modifiers": ["left_command", "left_shift"]
+                                    },
+                                    { "key_code": "delete_or_backspace" }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "delete_or_backspace",
+                                    "modifiers": { "mandatory": ["left_command", "right_command", "right_control", "right_option", "right_shift"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "a",
+                                        "modifiers": ["left_command"]
+                                    },
+                                    { "key_code": "delete_or_backspace" }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Hyper => F1~F12",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "1",
+                                    "modifiers": { "mandatory": ["right_command", "right_control", "right_option", "right_shift"] }
+                                },
+                                "to": [{ "key_code": "f1" }],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "2",
+                                    "modifiers": { "mandatory": ["right_command", "right_control", "right_option", "right_shift"] }
+                                },
+                                "to": [{ "key_code": "f2" }],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "3",
+                                    "modifiers": { "mandatory": ["right_command", "right_control", "right_option", "right_shift"] }
+                                },
+                                "to": [{ "key_code": "f3" }],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "4",
+                                    "modifiers": { "mandatory": ["right_command", "right_control", "right_option", "right_shift"] }
+                                },
+                                "to": [{ "key_code": "f4" }],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "5",
+                                    "modifiers": { "mandatory": ["right_command", "right_control", "right_option", "right_shift"] }
+                                },
+                                "to": [{ "key_code": "f5" }],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "6",
+                                    "modifiers": { "mandatory": ["right_command", "right_control", "right_option", "right_shift"] }
+                                },
+                                "to": [{ "key_code": "f6" }],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "7",
+                                    "modifiers": { "mandatory": ["right_command", "right_control", "right_option", "right_shift"] }
+                                },
+                                "to": [{ "key_code": "f7" }],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "8",
+                                    "modifiers": { "mandatory": ["right_command", "right_control", "right_option", "right_shift"] }
+                                },
+                                "to": [{ "key_code": "f8" }],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "9",
+                                    "modifiers": { "mandatory": ["right_command", "right_control", "right_option", "right_shift"] }
+                                },
+                                "to": [{ "key_code": "f9" }],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "0",
+                                    "modifiers": { "mandatory": ["right_command", "right_control", "right_option", "right_shift"] }
+                                },
+                                "to": [{ "key_code": "f10" }],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "hyphen",
+                                    "modifiers": { "mandatory": ["right_command", "right_control", "right_option", "right_shift"] }
+                                },
+                                "to": [{ "key_code": "f11" }],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "equal_sign",
+                                    "modifiers": { "mandatory": ["right_command", "right_control", "right_option", "right_shift"] }
+                                },
+                                "to": [{ "key_code": "f12" }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Capslock赋能Hyper",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "caps_lock",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "right_shift",
+                                        "modifiers": ["right_command", "right_control", "right_option"]
+                                    }
+                                ],
+                                "to_if_alone": [{ "key_code": "caps_lock" }],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "escape",
+                                    "modifiers": {
+                                        "mandatory": ["right_command", "right_control", "right_option", "right_shift"],
+                                        "optional": ["caps_lock"]
+                                    }
+                                },
+                                "to": [{ "key_code": "caps_lock" }],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "spacebar",
+                                    "modifiers": { "mandatory": ["right_command", "right_control", "right_option", "right_shift"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "spacebar",
+                                        "modifiers": ["left_control"]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "name": "Default profile",
+            "selected": true,
+            "virtual_hid_keyboard": { "keyboard_type_v2": "ansi" }
+        }
+    ]
+}

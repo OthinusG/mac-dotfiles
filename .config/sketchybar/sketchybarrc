@@ -1,0 +1,26 @@
+#!/bin/bash
+
+export PLUGIN_DIR="$CONFIG_DIR/plugins"
+export ITEM_DIR="$CONFIG_DIR/items"
+
+source "$CONFIG_DIR/colors.sh"
+
+source "$CONFIG_DIR/bar.sh"
+source "$CONFIG_DIR/defaults.sh"
+
+source "$ITEM_DIR/spaces.sh"
+source "$ITEM_DIR/front_app.sh"
+
+source "$ITEM_DIR/music.sh"
+
+source "$ITEM_DIR/cron.sh"
+source "$ITEM_DIR/calendar.sh"
+source "$ITEM_DIR/volume.sh"
+source "$ITEM_DIR/battery.sh"
+source "$ITEM_DIR/cpu.sh"
+source "$ITEM_DIR/caffeinate.sh"
+source "$ITEM_DIR/weather.sh"
+# source "$ITEM_DIR/wifi.sh"
+
+sketchybar --update
+
