@@ -1,4 +1,5 @@
 # mac-dotfiles
+## aerospace + sketchybar + borders + karabiner + wezterm + starship + nvim
 全都是从别人那里抄的
 
 # homebrew
