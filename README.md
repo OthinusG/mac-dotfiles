@@ -1,6 +1,6 @@
 # mac-dotfiles
 ## aerospace + sketchybar + borders + karabiner + wezterm + starship + nvim
-全都是从别人那里抄的
+全都是从别人那里抄的，略微修改
 ![image](https://github.com/OthinusG/mac-dotfiles/blob/main/readmefiles/insert.png)
 # homebrew
 brew tap FelixKratz/formulae
