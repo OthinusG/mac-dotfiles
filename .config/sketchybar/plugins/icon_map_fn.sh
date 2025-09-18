@@ -43,7 +43,7 @@ function icon_map() {
   "Microsoft Excel")
     icon_result=":microsoft_excel:"
     ;;
-  "Microsoft PowerPoint")
+  "Microsoft PowerPoint" | "Microsoft PowerPoint 2010")
     icon_result=":microsoft_power_point:"
     ;;
   "Telegram")
@@ -400,7 +400,7 @@ function icon_map() {
   "Affinity Designer")
     icon_result=":affinity_designer:"
     ;;
-  "mpv")
+  "mpv" | "IINA")
     icon_result=":mpv:"
     ;;
   "Thunderbird")
@@ -445,6 +445,9 @@ function icon_map() {
   "GIMP")
     icon_result=":photoshop:"
     ;;
+  "微信读书")
+    icon_result=":book:"
+    ;;
   "Steam Helper")
     icon_result=":steam:"
     ;;
@@ -465,6 +468,9 @@ function icon_map() {
     ;;
   "文档" | "Highlights")
     icon_result=":pdf:"
+    ;;
+  "OriginPro 9.1 32Bit")
+    icon_result=":matlab:"
     ;;
   *)
     icon_result=":default:"
