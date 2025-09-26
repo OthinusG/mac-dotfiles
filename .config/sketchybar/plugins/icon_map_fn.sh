@@ -472,6 +472,9 @@ function icon_map() {
   "OriginPro 9.1 32Bit")
     icon_result=":matlab:"
     ;;
+  "CodeRunner")
+    icon_result=":xcode:"
+    ;;
   *)
     icon_result=":default:"
     ;;
