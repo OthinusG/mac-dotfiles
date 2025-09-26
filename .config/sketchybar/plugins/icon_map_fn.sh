@@ -119,7 +119,7 @@ function icon_map() {
     icon_result=":libre_wolf:"
     ;;
   "Notes" | "备忘录")
-    icon_result=":notes:"
+    icon_result=":pages:"
     ;;
   "Notion")
     icon_result=":notion:"
@@ -191,7 +191,7 @@ function icon_map() {
     icon_result=":default:"
     ;;
   "Pages" | "Pages文稿")
-    icon_result=":pages:"
+    icon_result=":notes:"
     ;;
   "Emacs")
     icon_result=":emacs:"
@@ -440,7 +440,7 @@ function icon_map() {
     icon_result=":qbittorrent:"
     ;;
   "UU远程")
-    icon_result=":vmware_fusion:"
+    icon_result=":podcasts:"
     ;;
   "GIMP")
     icon_result=":photoshop:"
@@ -460,8 +460,8 @@ function icon_map() {
   "HSTracker")
     icon_result=":Hstracker:"
     ;;
-  "MuMu模拟器Pro")
-    icon_result=":spark:"
+  "MuMu模拟器Pro" | "MuMuPlayer Pro" | "MuMu Android Device")
+    icon_result=":vmware_fusion:"
     ;;
   "文本编辑")
     icon_result=":text:"
