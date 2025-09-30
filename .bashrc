@@ -41,3 +41,7 @@ bind "$(bind -s | command grep '^"\\ec"' | sed 's/ec/ed/')"
 # [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 # [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 ßß
+
+# >>> Added by Spyder >>>
+alias uninstall-spyder=/Users/wqin/Library/spyder-6/uninstall-spyder.sh
+# <<< Added by Spyder <<<
