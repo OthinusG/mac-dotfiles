@@ -470,13 +470,13 @@ function icon_map() {
     icon_result=":pdf:"
     ;;
   "OriginPro 9.1 32Bit")
-    icon_result=":matlab:"
+    icon_result=":numbers:"
     ;;
   "CodeRunner")
     icon_result=":xcode:"
     ;;
     "妙言")
-      icon_result=":bear:"
+      icon_result=":notability:"
     ;;
     "飞牛")
     icon_result=":windows_app:"
@@ -484,7 +484,7 @@ function icon_map() {
     "夸克")
     icon_result=":qute_browser:"
     ;;
-    "密码")
+    "密码" | "Password")
     icon_result=":macpass:"
     ;;
     *)
