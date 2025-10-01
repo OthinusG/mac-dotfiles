@@ -2,6 +2,16 @@
 ## aerospace + sketchybar + borders + karabiner + wezterm + starship + nvim
 自用mac-tahoe dotfiles，全都是从别人那里抄的，略微修改
 ![image](https://github.com/OthinusG/mac-dotfiles/blob/main/readmefiles/insert.png)
+# Install
+1. Install homebrew and brew install packages listed down;
+2. Backup your own config files,
+3. Download config files and paste overlay file,
+4. (Optional) Use karabiner to modify the function of the caps key.
+# 安装
+1. 安装 Homebrew 和用 Brew 安装下列包；
+2. 备份您自己的配置文件；
+3. 下载配置文件并粘贴覆盖文件；
+4. （可选）利用karabiner修改caps键功能。
 # homebrew
 `brew tap FelixKratz/formulae`
 `brew install borders btop ca-certificates fzf git glow lua neofetch neovim node nowplaying-cli gromgit/fuse/ntfs-3g-mac pandoc pipx python3 sketchybar switchaudio-osx wget zsh zsh-autosuggestions zsh-completions zsh-syntax-highlighting gcc npm git llvm fd starship`
