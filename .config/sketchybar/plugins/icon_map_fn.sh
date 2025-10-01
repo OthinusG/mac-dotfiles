@@ -119,7 +119,7 @@ function icon_map() {
     icon_result=":libre_wolf:"
     ;;
   "Notes" | "备忘录")
-    icon_result=":pages:"
+    icon_result=":notes:"
     ;;
   "Notion")
     icon_result=":notion:"
@@ -191,7 +191,7 @@ function icon_map() {
     icon_result=":default:"
     ;;
   "Pages" | "Pages文稿")
-    icon_result=":notes:"
+    icon_result=":pages:"
     ;;
   "Emacs")
     icon_result=":emacs:"
@@ -428,7 +428,7 @@ function icon_map() {
     icon_result=":qq:"
     ;;
   "EndNote 21")
-    icon_result=":zotero:"
+    icon_result=":emacs:"
     ;;
   "Ulysses")
     icon_result=":pages:"
@@ -455,7 +455,7 @@ function icon_map() {
     icon_result=":battle_net:"
     ;;
   "Hearthstone")
-    icon_result=":Hearthstone:"
+    icon_result=":HearthStone:"
     ;;
   "HSTracker")
     icon_result=":Hstracker:"
@@ -475,7 +475,19 @@ function icon_map() {
   "CodeRunner")
     icon_result=":xcode:"
     ;;
-  *)
+    "妙言")
+      icon_result=":bear:"
+    ;;
+    "飞牛")
+    icon_result=":windows_app:"
+    ;;
+    "夸克")
+    icon_result=":qute_browser:"
+    ;;
+    "密码")
+    icon_result=":macpass:"
+    ;;
+    *)
     icon_result=":default:"
     ;;
   esac
