@@ -3,7 +3,7 @@
 source "$CONFIG_DIR/colors.sh" # Loads all defined colors
 
 FONT="Hack Nerd Font" # Nerd font is preferred
-PADDINGS=4                     # All paddings use this value (icon, label, background)
+PADDINGS=0                     # All paddings use this value (icon, label, background)
 
 THEME="dark" # light|dark
 AUTO_SWITCH_THEME=on
