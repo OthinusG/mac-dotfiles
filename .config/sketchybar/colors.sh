@@ -29,7 +29,7 @@ export TRANSPARENT=0x00000000
  export BAR_COLOR=0xaa1a1c26
 # export BAR_COLOR=0xffe2e2e3
  export ITEM_BG_COLOR=0xff353c3f
- export ACCENT_COLOR=0xffe2e2e3
+ export ACCENT_COLOR=0xffffffff
  export BACKGROUND=0xff101314
  #export BACKGROUND=0xffe2e2e3
 # -- Purple Scheme --
