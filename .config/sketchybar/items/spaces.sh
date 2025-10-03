@@ -25,12 +25,12 @@ for sid in $(aerospace list-workspaces --all); do
     icon.padding_left=7 \
     icon.padding_right=4 \
     background.drawing=on \
-    label.font="sketchybar-app-font:Regular:16.0" \
+    label.font="sketchybar-app-font:Regular:14.0" \
     background.color="$ACCENT_COLOR" \
     icon.color="$BACKGROUND" \
     label.color="$BACKGROUND" \
-    background.corner_radius=10 \
-    background.height=25 \
+    background.corner_radius=8 \
+    background.height=20 \
     label.drawing=on \
     click_script="aerospace workspace $sid" \
     script="$CONFIG_DIR/plugins/aerospace.sh $sid"

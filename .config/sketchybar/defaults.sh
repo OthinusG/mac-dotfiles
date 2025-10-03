@@ -3,8 +3,8 @@
 default=(
   padding_left=5
   padding_right=5
-  icon.font="Hack Nerd Font:Bold:17.0"
-  label.font="Hack Nerd Font:Bold:14.0"
+  icon.font="Hack Nerd Font:Bold:16.0"
+  label.font="Hack Nerd Font:Bold:13.0"
   icon.color="$ACCENT_COLOR"
   label.color="$ACCENT_COLOR"
   icon.padding_left=4
@@ -12,8 +12,8 @@ default=(
   label.padding_left=4
   label.padding_right=4
   background.color="$ITEM_BG_COLOR"
-  background.corner_radius=10
-  background.height=24
+  background.corner_radius=8
+  background.height=20
   background.drawing=off
 )
 
