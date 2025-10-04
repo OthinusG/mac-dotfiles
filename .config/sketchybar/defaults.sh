@@ -12,7 +12,7 @@ default=(
   label.padding_left=4
   label.padding_right=4
   background.color="$ITEM_BG_COLOR"
-  background.corner_radius=8
+  background.corner_radius=7
   background.height=20
   background.drawing=off
 )
