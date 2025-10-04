@@ -62,7 +62,7 @@ key-mapping.preset = 'qwerty'
 [gaps]
 inner.horizontal = 13
 inner.vertical = 13
-outer.top = [{ monitor."HDMI2.1" = 44 }, { monitor."Sculptor" = 44 }, 13]
+outer.top = [{ monitor."HDMI2.1" = 45 }, { monitor."Sculptor" = 45 }, 14]
 outer.left = 10
 outer.bottom = 9
 outer.right = 10
