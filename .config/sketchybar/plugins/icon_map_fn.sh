@@ -487,6 +487,9 @@ function icon_map() {
     "密码" | "Password")
     icon_result=":macpass:"
     ;;
+    "python")
+    icon_result=":xcode:"
+    ;;
     *)
     icon_result=":default:"
     ;;
