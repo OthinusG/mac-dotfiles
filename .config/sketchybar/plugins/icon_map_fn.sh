@@ -475,22 +475,28 @@ function icon_map() {
   "CodeRunner")
     icon_result=":xcode:"
     ;;
-    "妙言")
+  "LocalSend")
+    icon_result=":localsend:"
+    ;;
+  "妙言")
       icon_result=":notability:"
     ;;
-    "飞牛")
-    icon_result=":windows_app:"
+  "飞牛")
+    icon_result=":iina:"
     ;;
-    "夸克")
+  "夸克")
     icon_result=":qute_browser:"
     ;;
-    "密码" | "Password")
+  "密码" | "Password")
     icon_result=":macpass:"
     ;;
-    "python")
+  "python")
     icon_result=":xcode:"
     ;;
-    *)
+  "Modern CSV")
+    icon_result=":numbers:"
+    ;;
+  *)
     icon_result=":default:"
     ;;
   esac
