@@ -1,5 +1,8 @@
 #!/bin/bash
-
+PLAYER_LABLE_COLOR=0xff5699af
+PLAYER_PLAY_ICON_COLOR=0xffc678dd
+PLAYER_PAUSE_ICON_COLOR=0xff98be65
+PLAYER_STOP_ICON_COLOR=0xffFC9867
 export WHITE=0xffffffff
 
 export TRANSPARENT=0x00000000
@@ -30,7 +33,7 @@ export TRANSPARENT=0x00000000
 # export BAR_COLOR=0xffe2e2e3
  export ITEM_BG_COLOR=0xff353c3f
  export ACCENT_COLOR=0xffffffff
- export BACKGROUND=0xff101314
+ export BACKGROUND=0xff5699af
  #export BACKGROUND=0xffe2e2e3
 # -- Purple Scheme --
 # export BAR_COLOR=0xff140c42
