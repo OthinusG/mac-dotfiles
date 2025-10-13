@@ -6,7 +6,7 @@
 1. Install homebrew and brew install packages listed down;
 2. Backup your own config files,
 3. Download config files and paste overlay file,
-4. (Optional) Use karabiner to modify the function of the caps key.
+4. (no use) Use karabiner to modify the function of the caps key.
 5. (Optional) Modify your weather location: `/Users/**USER_NAME**/.config/sketchybar/settings.sh`, change `WEATHER_BAIDU_QUERY="上海闵行天气"` to the location name of your area.
 6. (Optional) This music script supports Apple Music, Spotify, and YouTube Music. Spotify support is enabled by default.
    - **To enable Apple Music**: Edit the file `~/.config/sketchybar/plugins/now_playing.sh`. Comment out the line containing `get_spotify_info` and the `process_player_info` line immediately following it. Then, uncomment the line containing `get_apple_music_info` and its corresponding `process_player_info` line below it.
