@@ -1,6 +1,6 @@
 # mac-dotfiles
 ## aerospace + sketchybar + borders + karabiner + wezterm + starship + nvim
-这是我自用的 macOS dotfiles，主题风格灵感来源于 "Tahoe"。
+这是我自用的 macOS dotfiles，主题风格灵感来源于 "MacOS"。
 绝大部分配置都“借鉴”自社区里的大佬们，我只是根据自己的使用习惯进行了一些微调和整合。最终目标是打造一个简洁、高效且能让我专注于当前任务的桌面环境。为了实现高效的音乐控制，我对状态栏的音乐控件进行了自定义，操作逻辑如下：
 |操作|功能|
 |---|---|
@@ -8,7 +8,7 @@
 |右键点击|下一曲|
 |Ctrl+右键点击|上一曲|
 
-**These are my personal macOS dotfiles, with a theme inspired by "Tahoe".**
+**These are my personal macOS dotfiles, with a theme inspired by "MacOS".**
 The vast majority of this configuration is borrowed from the work of others in the community; I've simply tweaked and integrated it to fit my own habits and workflow. The ultimate goal is to create a clean, efficient desktop environment that helps me stay focused on the task at hand.
 For more efficient music control, I have customized the status bar music widget. The controls are as follows:
 
