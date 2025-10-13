@@ -1,6 +1,23 @@
 # mac-dotfiles
 ## aerospace + sketchybar + borders + karabiner + wezterm + starship + nvim
-自用mac-tahoe dotfiles，全都是从别人那里抄的，略微修改，开启了hazeover，非焦点窗口亮度下降。
+这是我自用的 macOS dotfiles，主题风格灵感来源于 "Tahoe"。
+绝大部分配置都“借鉴”自社区里的大佬们，我只是根据自己的使用习惯进行了一些微调和整合。最终目标是打造一个简洁、高效且能让我专注于当前任务的桌面环境。为了实现高效的音乐控制，我对状态栏的音乐控件进行了自定义，操作逻辑如下：
+|操作|功能|
+|---|---|
+|左键点击|播放/暂停|
+|右键点击|下一曲|
+|Ctrl+右键点击|上一曲|
+
+**These are my personal macOS dotfiles, with a theme inspired by "Tahoe".**
+The vast majority of this configuration is borrowed from the work of others in the community; I've simply tweaked and integrated it to fit my own habits and workflow. The ultimate goal is to create a clean, efficient desktop environment that helps me stay focused on the task at hand.
+For more efficient music control, I have customized the status bar music widget. The controls are as follows:
+
+| Action | Function |
+| :--- | :--- |
+| Left-click | Play/Pause |
+| Right-click | Next Track |
+| Ctrl + Right-click | Previous Track |
+
 ![image](https://github.com/OthinusG/mac-dotfiles/blob/main/readmefiles/insert.png)
 # Install
 1. Install homebrew and brew install packages listed down;
