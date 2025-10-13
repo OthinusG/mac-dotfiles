@@ -24,38 +24,9 @@
 # homebrew
 ```
 brew tap FelixKratz/formulae gromgit/fuse
-brew install \
-borders                 libunistring            python@3.13\
-brotli                  libuv                   readline\
-btop                    llvm                    screenresolution\
-c-ares                  lpeg                    sketchybar\
-ca-certificates         lua                     sqlite\
-cmake                   luajit                  starship\
-fd                      luv                     tree-sitter\
-fzf                     lz4                     unibilium\
-gcc                     mpdecimal               utf8proc\
-gettext                 mpfr                    wget\
-git                     ncurses                 xz\
-glow                    neofetch                z3\
-gmp                     neovim                  zsh\
-icu4c@77                node                    zsh-autosuggestions\
-im-select               ntfs-3g-mac             zsh-completions\
-isl                     openssl@3               zsh-syntax-highlighting\
-libidn2                 pandoc                  zstd\
-libmpc                  pcre2\
-libnghttp2              pipx\
+brew install borders lua luajit starship neofetch neovim zsh zsh-autosuggestions zsh-completions zsh-syntax-highlighting
 
-brew install --cask \
-aerospace                       logoer\
-appcleaner                      maccy\
-font-hack-nerd-font             macfuse\
-font-maple-mono                 mounty\
-font-sf-mono                    qlmarkdown\
-font-sf-pro                     sf-symbols\
-font-sketchybar-app-font        swipeaerospace\
-linearmouse                     wezterm\
-localsend
-```
+brew install --cask aerospace font-hack-nerd-font font-maple-mono font-sf-mono font-sf-pro sf-symbols font-sketchybar-app-font swipeaerospace wezterm
 
 # karabiner
 `karabiner://karabiner/assets/complex_modifications/import?url=https://raw.githubusercontent.com/OthinusG/capslox-karabiner/refs/heads/main/capslox-karabiner.json`
