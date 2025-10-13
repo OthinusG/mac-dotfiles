@@ -129,7 +129,8 @@ alt-7 = 'workspace 7'
 alt-8 = 'workspace 8'
 alt-9 = 'workspace 9'
 alt-0 = 'workspace 10'
-alt-t = 'workspace t'
+alt-s = 'workspace S'
+alt-c = 'workspace C'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
 alt-shift-1 = ['move-node-to-workspace 1', 'workspace 1']
@@ -142,7 +143,8 @@ alt-shift-7 = ['move-node-to-workspace 7', 'workspace 7']
 alt-shift-8 = ['move-node-to-workspace 8', 'workspace 8']
 alt-shift-9 = ['move-node-to-workspace 9', 'workspace 9']
 alt-shift-0 = ['move-node-to-workspace 10', 'workspace 10']
-alt-shift-t = ['move-node-to-workspace t', 'workspace t']
+alt-shift-s = ['move-node-to-workspace S', 'workspace S']
+alt-shift-c = ['move-node-to-workspace C', 'workspace C']
 # See: https://nikitabobko.github.io/AeroSpace/commands#workspace-back-and-forth
 alt-tab = 'workspace-back-and-forth'
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-workspace-to-monitor
@@ -249,25 +251,30 @@ run = ['move-node-to-workspace 7']
 if.app-id = 'com.vavlesoftware.steam'
 run = ['move-node-to-workspace 7']
 
-# 8. qq
+# C. qq
 [[on-window-detected]]
 if.app-id = 'com.tencent.qq'
-run = ['move-node-to-workspace 8']
+run = ['move-node-to-workspace C']
 
-# 8. wechat
+# C. wechat
 [[on-window-detected]]
 if.app-id = 'com.tencent.xinWeChat'
-run = ['move-node-to-workspace 8']
+run = ['move-node-to-workspace C']
 
 # 9. Calendar (macOS native Calendar app)
 [[on-window-detected]]
 if.app-id = 'com.apple.iCal'
 run = ['move-node-to-workspace 9']
 
-# 10. YouTube music
+# S. Youtube Music
 [[on-window-detected]]
 if.app-id = 'com.github.th-ch.youtube-music'
-run = ['layout floating', 'move-node-to-workspace 10']
+run = ['layout floating', 'move-node-to-workspace S']
+
+# S. Spotify
+[[on-window-detected]]
+if.app-id = 'com.spotify.client'
+run = ['layout floating', 'move-node-to-workspace S']
 
 # Pritunl - always floating in same active window
 [[on-window-detected]]
