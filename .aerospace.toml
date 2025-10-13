@@ -261,17 +261,32 @@ run = ['move-node-to-workspace C']
 if.app-id = 'com.tencent.xinWeChat'
 run = ['move-node-to-workspace C']
 
+# C. discord
+[[on-window-detected]]
+if.app-id = 'com.hnc.Discord'
+run = ['move-node-to-workspace C']
+
+# C. telegram
+[[on-window-detected]]
+if.app-id = 'ru.keepcoder.Telegram'
+run = ['move-node-to-workspace C']
+
 # 9. Calendar (macOS native Calendar app)
 [[on-window-detected]]
 if.app-id = 'com.apple.iCal'
 run = ['move-node-to-workspace 9']
 
-# S. Youtube Music
+# M. Apple Music
+[[on-window-detected]]
+if.app-id = 'com.apple.Music'
+run = ['layout floating', 'move-node-to-workspace S']
+
+# M. Youtube Music
 [[on-window-detected]]
 if.app-id = 'com.github.th-ch.youtube-music'
 run = ['layout floating', 'move-node-to-workspace S']
 
-# S. Spotify
+# M. Spotify
 [[on-window-detected]]
 if.app-id = 'com.spotify.client'
 run = ['layout floating', 'move-node-to-workspace S']
