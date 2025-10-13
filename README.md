@@ -27,7 +27,7 @@ brew tap FelixKratz/formulae gromgit/fuse
 brew install borders lua luajit starship neofetch neovim zsh zsh-autosuggestions zsh-completions zsh-syntax-highlighting
 
 brew install --cask aerospace font-hack-nerd-font font-maple-mono font-sf-mono font-sf-pro sf-symbols font-sketchybar-app-font swipeaerospace wezterm
-
+```
 # karabiner
 `karabiner://karabiner/assets/complex_modifications/import?url=https://raw.githubusercontent.com/OthinusG/capslox-karabiner/refs/heads/main/capslox-karabiner.json`
 
