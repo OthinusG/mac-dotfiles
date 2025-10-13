@@ -36,23 +36,17 @@ else
     LAST_PLAYING_LABEL="Paused"
 fi
 
-# Mouse control: supported only to MPD
-if [[ "$SENDER" == "mouse."* ]] && [[ "$LAST_PLAYING_LABEL" == "MPD "* ]]; then
+# Mouse control: 
+if [[ "$SENDER" == "mouse."* ]]; then
     # echo "sender: $SENDER, button: $BUTTON, modifier: $MODIFIER, scroll_delta: $SCROLL_DELTA" > /tmp/logs.txt
     case "$SENDER" in
         "mouse.clicked")
             case "$BUTTON" in
                 "left")
-                    if [ "$MODIFIER" = "ctrl" ]; then
-                        ~/.cargo/bin/rmpc prev
-                    else
-                        ~/.cargo/bin/rmpc togglepause
-                    fi
+                    osascript -e "tell application \"$PLAYER\" to playpause"
                     ;;
                 "right")
-                    if [ "$MODIFIER" = "ctrl" ]; then
-                        ~/.cargo/bin/rmpc next
-                    fi
+                    osascript -e "tell application \"$PLAYER\" to playpause"
                     ;;
             esac
             ;;
