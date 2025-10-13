@@ -17,10 +17,11 @@ The vast majority of this configuration is borrowed from the work of others in t
 For more efficient music control, I have customized the status bar music widget. The controls are as follows:
 
 | Action             | Function       |
-| :----------------- | :------------- |
+| ------------------ | -------------- |
 | Left-click         | Play/Pause     |
 | Right-click        | Next Track     |
 | Ctrl + Right-click | Previous Track |
+
 
 **New Feature**: The native macOS menu bar for the active application can now be accessed by clicking the current app label.
 ![image](https://github.com/OthinusG/mac-dotfiles/blob/main/readmefiles/insert2.png)
