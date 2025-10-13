@@ -8,6 +8,7 @@
 | 左键点击      | 播放/暂停 |
 | 右键点击      | 下一曲    |
 | Ctrl+右键点击 | 上一曲    |
+
 **新特性**：点击当前app标签可弹出macos系统菜单栏
 ![image](https://github.com/OthinusG/mac-dotfiles/blob/main/readmefiles/insert2.png)
 
