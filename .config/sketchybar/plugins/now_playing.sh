@@ -43,11 +43,14 @@ if [[ "$SENDER" == "mouse."* ]]; then
         "mouse.clicked")
             case "$BUTTON" in
                 "left")
-                    osascript -e "tell application \"$PLAYER\" to playpause"
+                     osascript -e "tell application \"$PLAYER\" to playpause"
                     ;;
                 "right")
-                    osascript -e "tell application \"$PLAYER\" to playpause"
-                    ;;
+                    if [ "$MODIFIER" = "ctrl" ]; then
+                        osascript -e "tell application \"$PLAYER\" to previous track"
+                    else
+                        osascript -e "tell application \"$PLAYER\" to next track"
+                    fi
             esac
             ;;
         "mouse.scrolled")
