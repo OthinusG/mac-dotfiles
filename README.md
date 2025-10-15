@@ -51,7 +51,7 @@ For more efficient music control, I have customized the status bar music widget.
 # homebrew
 ```
 brew tap FelixKratz/formulae gromgit/fuse
-brew install borders lua luajit jq starship neofetch neovim zsh zsh-autosuggestions zsh-completions zsh-syntax-highlighting
+brew install borders lua luajit git llvm fd npm jq starship neofetch neovim zsh zsh-autosuggestions zsh-completions zsh-syntax-highlighting
 
 brew install --cask aerospace font-hack-nerd-font font-maple-mono font-sf-mono font-sf-pro sf-symbols font-sketchybar-app-font swipeaerospace wezterm
 ```
