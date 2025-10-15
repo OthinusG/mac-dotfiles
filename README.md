@@ -51,9 +51,9 @@ For more efficient music control, I have customized the status bar music widget.
 # homebrew
 ```
 brew tap FelixKratz/formulae gromgit/fuse
-brew install borders lua luajit git llvm fd npm jq starship neofetch neovim zsh zsh-autosuggestions zsh-completions zsh-syntax-highlighting
+brew install border mpfr brotli ncurses btop neovim c-ares node ca-certificates nowplaying-cli fastfetch ntfs-3g-mac fd openssl@3 fzf pandoc gcc pcre2 gettext pipx git python@3.13 glow readline gmp simdjson icu4c@77 sketchybar isl sqlite libidn2 starship libmpc tree-sitter libnghttp2 unibilium libnghttp3 utf8proc libngtcp2 uvwasi libunistring wget libuv xz llvm yyjson lpeg z3 lua zsh luajit zsh-autosuggestions luv zsh-completions lz4 zsh-syntax-highlighting mpdecimal zstd
 
-brew install --cask aerospace font-hack-nerd-font font-maple-mono font-sf-mono font-sf-pro sf-symbols font-sketchybar-app-font swipeaerospace wezterm
+brew install --casks aerospace font-hack-nerd-font font-maple-mono font-sketchybar-app-font localsend maccy mounty qlmarkdown sf-symbols
 ```
 # karabiner
 `karabiner://karabiner/assets/complex_modifications/import?url=https://raw.githubusercontent.com/OthinusG/capslox-karabiner/refs/heads/main/capslox-karabiner.json`
