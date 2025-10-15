@@ -97,7 +97,7 @@ function icon_map() {
   "qutebrowser")
     icon_result=":qute_browser:"
     ;;
-  "Typora")
+  "Typora" | "CotEditor")
     icon_result=":text:"
     ;;
   "Sequel Pro")
