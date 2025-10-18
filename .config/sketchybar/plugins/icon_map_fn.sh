@@ -496,6 +496,9 @@ function icon_map() {
   "Modern CSV")
     icon_result=":numbers:"
     ;;
+  "TextMate")
+    icon_result=":text:"
+    ;;
   *)
     icon_result=":default:"
     ;;
