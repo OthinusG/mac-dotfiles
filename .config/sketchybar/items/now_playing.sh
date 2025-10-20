@@ -10,7 +10,7 @@ now_playing=(
     script="$PLUGIN_DIR/now_playing.sh"
     background.drawing=on
     background.color=0xffffffff
-    label.color="$BACKGROUND"
+    label.color=0xff5699af
     drawing=off
     display=1
 )

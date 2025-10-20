@@ -1,5 +1,5 @@
 #!/bin/bash
-
+export CONFIG_DIR="$HOME/.config/sketchybar"
 export PLUGIN_DIR="$CONFIG_DIR/plugins"
 export ITEM_DIR="$CONFIG_DIR/items"
 
@@ -7,7 +7,6 @@ source "$CONFIG_DIR/colors.sh"
 
 source "$CONFIG_DIR/bar.sh"
 source "$CONFIG_DIR/defaults.sh"
-
 source "$ITEM_DIR/spaces.sh"
 source "$ITEM_DIR/front_app.sh"
 

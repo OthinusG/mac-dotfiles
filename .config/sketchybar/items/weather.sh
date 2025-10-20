@@ -18,3 +18,4 @@ weather=(
 sketchybar --add item weather left \
     --set weather "${weather[@]}" \
     #--subscribe weather mouse.clicked
+
