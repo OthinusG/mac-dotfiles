@@ -499,6 +499,12 @@ function icon_map() {
   "TextMate")
     icon_result=":text:"
     ;;
+  "GUI.for.Clash")
+    icon_result=":activity_monitor:"
+    ;;
+  "AppCleaner")
+    icon_result=":app_cleaner:"
+    ;;
   *)
     icon_result=":default:"
     ;;
