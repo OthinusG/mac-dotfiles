@@ -505,6 +505,9 @@ function icon_map() {
   "AppCleaner")
     icon_result=":app_cleaner:"
     ;;
+  "Google Gemini")
+    icon_result=":gemini:"
+    ;;
   *)
     icon_result=":default:"
     ;;
