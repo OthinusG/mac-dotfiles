@@ -500,10 +500,13 @@ function icon_map() {
     icon_result=":text:"
     ;;
   "GUI.for.Clash")
-    icon_result=":activity_monitor:"
+    icon_result=":moon:"
     ;;
   "AppCleaner")
     icon_result=":app_cleaner:"
+    ;;
+  "Deskflow")
+    icon_result=":sun:"
     ;;
   "Google Gemini")
     icon_result=":gemini:"
