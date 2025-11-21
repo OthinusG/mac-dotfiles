@@ -430,7 +430,7 @@ function icon_map() {
   "EndNote 21")
     icon_result=":emacs:"
     ;;
-  "Ulysses")
+  "Ulysses" | "iA Writer")
     icon_result=":pages:"
     ;;
   "OmniOutliner")
@@ -439,8 +439,8 @@ function icon_map() {
   "qBittorrent")
     icon_result=":qbittorrent:"
     ;;
-  "UU远程")
-    icon_result=":podcasts:"
+  "UU远程" | "无界趣连2.0")
+    icon_result=":windows_app:"
     ;;
   "GIMP")
     icon_result=":photoshop:"
@@ -510,6 +510,9 @@ function icon_map() {
     ;;
   "Google Gemini")
     icon_result=":gemini:"
+    ;;
+  "Microsoft AutoUpdate")
+    icon_result=":down_arrow:"
     ;;
   *)
     icon_result=":default:"
