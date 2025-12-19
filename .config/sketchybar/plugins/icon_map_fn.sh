@@ -296,7 +296,7 @@ function icon_map() {
     icon_result=":drafts:"
     ;;
   "Preview" | "预览" | "Skim" | "zathura")
-    icon_result=":pdf:"
+    icon_result=":preview:"
     ;;
   "PyCharm")
     icon_result=":pycharm:"
@@ -488,7 +488,7 @@ function icon_map() {
     icon_result=":qute_browser:"
     ;;
   "密码" | "Password")
-    icon_result=":macpass:"
+    icon_result=":passwords:"
     ;;
   "python")
     icon_result=":xcode:"
@@ -513,6 +513,9 @@ function icon_map() {
     ;;
   "Microsoft AutoUpdate")
     icon_result=":down_arrow:"
+    ;;
+  "欧易 OKX")
+    icon_result=":bitcoin:"
     ;;
   *)
     icon_result=":default:"
