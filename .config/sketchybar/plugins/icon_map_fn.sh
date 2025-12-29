@@ -256,9 +256,6 @@ function icon_map() {
   "Vivaldi")
     icon_result=":vivaldi:"
     ;;
-  "Calibre")
-    icon_result=":book:"
-    ;;
   "Min")
     icon_result=":min_browser:"
     ;;
@@ -448,6 +445,9 @@ function icon_map() {
   "微信读书")
     icon_result=":book:"
     ;;
+  "图书" | "Apple Books")
+    icon_result=":book:"
+    ;;
   "Steam Helper")
     icon_result=":steam:"
     ;;
@@ -513,6 +513,12 @@ function icon_map() {
     ;;
   "Microsoft AutoUpdate")
     icon_result=":down_arrow:"
+    ;;
+  "OpenComic")
+    icon_result=":calibre:"
+    ;;
+  "calibre")
+    icon_result=":calibre:"
     ;;
   "欧易 OKX")
     icon_result=":bitcoin:"
