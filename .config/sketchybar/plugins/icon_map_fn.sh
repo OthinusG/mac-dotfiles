@@ -523,7 +523,7 @@ function icon_map() {
   "欧易 OKX")
     icon_result=":bitcoin:"
     ;;
-  "VidHub")
+  "VidHub" | "FN Player")
     icon_result=":iina:"
     ;;
   *)
