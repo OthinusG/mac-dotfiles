@@ -523,6 +523,9 @@ function icon_map() {
   "欧易 OKX")
     icon_result=":bitcoin:"
     ;;
+  "VidHub")
+    icon_result=":iina:"
+    ;;
   *)
     icon_result=":default:"
     ;;
