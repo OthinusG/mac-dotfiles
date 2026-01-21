@@ -469,7 +469,7 @@ function icon_map() {
   "文档" | "Highlights")
     icon_result=":pdf:"
     ;;
-  "OriginPro 9.1 32Bit")
+  "OriginPro 9.1 32Bit" | "Origin 2021")
     icon_result=":numbers:"
     ;;
   "CodeRunner")
