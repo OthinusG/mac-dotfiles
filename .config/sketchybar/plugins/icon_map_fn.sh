@@ -43,7 +43,7 @@ function icon_map() {
   "Microsoft Excel")
     icon_result=":microsoft_excel:"
     ;;
-  "Microsoft PowerPoint" | "Microsoft PowerPoint 2010")
+  "Microsoft PowerPoint" | "Microsoft Powerpoint")
     icon_result=":microsoft_power_point:"
     ;;
   "Telegram")
