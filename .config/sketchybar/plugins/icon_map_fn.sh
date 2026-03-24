@@ -526,6 +526,9 @@ function icon_map() {
   "VidHub" | "FN Player")
     icon_result=":iina:"
     ;;
+  "Eagle")
+    icon_result=":eagle:"
+	;;
   *)
     icon_result=":default:"
     ;;
