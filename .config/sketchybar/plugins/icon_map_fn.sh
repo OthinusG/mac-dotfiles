@@ -440,7 +440,7 @@ function icon_map() {
     icon_result=":windows_app:"
     ;;
   "GIMP")
-    icon_result=":photoshop:"
+    icon_result=":gimp:"
     ;;
   "微信读书")
     icon_result=":book:"
@@ -485,7 +485,7 @@ function icon_map() {
     icon_result=":iina:"
     ;;
   "夸克")
-    icon_result=":qute_browser:"
+    icon_result=":quark:"
     ;;
   "密码" | "Password")
     icon_result=":passwords:"
@@ -529,6 +529,9 @@ function icon_map() {
   "Eagle")
     icon_result=":eagle:"
 	;;
+  "明日方舟")
+    icon_result=":playing:"
+  	;;
   *)
     icon_result=":default:"
     ;;
