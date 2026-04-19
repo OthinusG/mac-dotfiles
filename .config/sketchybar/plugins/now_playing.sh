@@ -85,7 +85,7 @@ function get_spotify_info() {
 # Function to get Apple Music info
 function get_apple_music_info() {
     local state=$(osascript -e 'tell application "Music" to player state as string' 2>/dev/null)
-    PLAYER="iTunes"
+    PLAYER="Music"
     if [[ "$state" == "playing" ]]; then
         STATUS="playing"
         ARTIST=$(osascript -e 'tell application "Music" to artist of current track as string' 2>/dev/null)
