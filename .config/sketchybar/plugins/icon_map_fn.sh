@@ -852,7 +852,7 @@ function icon_map() {
    "Microsoft Outlook")
         icon_result=":microsoft_outlook:"
         ;;
-   "Microsoft PowerPoint")
+   "Microsoft PowerPoint" | "Microsoft Powerpoint")
         icon_result=":microsoft_power_point:"
         ;;
    "Microsoft Remote Desktop")
@@ -913,7 +913,7 @@ function icon_map() {
         icon_result=":musescore:"
         ;;
    "Music" | "音乐" | "Musique" | "ミュージック" | "Musik" | "Chromatix" | "Музика" | "Музыка")
-        icon_result=":music:"
+        icon_result=":qqmusic:"
         ;;
    "Native Access")
         icon_result=":native_instruments:"
@@ -1724,6 +1724,9 @@ function icon_map() {
   	  ;;
     "明日方舟" | "Arknights")
       icon_result=":playing:"
+      ;;
+    "Animeko")
+      icon_result=":bilibili:"
       ;;
     *)
         icon_result=":default:"
