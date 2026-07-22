@@ -1690,7 +1690,7 @@ function icon_map() {
       icon_result=":numbers:"
       ;;
     "TextMate")
-      icon_result=":text:"
+      icon_result=":textedit:"
       ;;
     "GUI.for.Clash")
       icon_result=":moon:"
@@ -1717,13 +1717,16 @@ function icon_map() {
       icon_result=":bitcoin:"
       ;;
     "VidHub" | "FN Player")
-      icon_result=":iina:"
+      icon_result=":bilibili:"
       ;;
     "Eagle")
       icon_result=":eagle:"
   	  ;;
     "明日方舟" | "Arknights")
       icon_result=":playing:"
+      ;;
+    "Texifier")
+      icon_result=":overleaf:"
       ;;
     "Animeko")
       icon_result=":bilibili:"
