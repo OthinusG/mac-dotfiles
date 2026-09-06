@@ -9,8 +9,8 @@ now_playing=(
     label.font.style="Bold Italic"
     script="$PLUGIN_DIR/now_playing.sh"
     background.drawing=on
-    background.color=0xffffffff
-    label.color=0xff5699af
+    background.color=$ACCENT_COLOR
+    label.color=$BAR_COLOR
     drawing=off
     display=1
 )

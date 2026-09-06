@@ -33,7 +33,7 @@ export TRANSPARENT=0x00000000
 # export BAR_COLOR=0xffe2e2e3
  export ITEM_BG_COLOR=0xff353c3f
  export ACCENT_COLOR=0xffffffff
- export BACKGROUND=0xff5699af
+ export BACKGROUND=$BAR_COLOR
  #export BACKGROUND=0xffe2e2e3
 # -- Purple Scheme --
 # export BAR_COLOR=0xff140c42

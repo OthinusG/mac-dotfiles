@@ -852,7 +852,7 @@ function icon_map() {
    "Microsoft Outlook")
         icon_result=":microsoft_outlook:"
         ;;
-   "Microsoft PowerPoint" | "Microsoft Powerpoint")
+   "Microsoft PowerPoint" | "Microsoft Powerpoint" | "POWERPNT")
         icon_result=":microsoft_power_point:"
         ;;
    "Microsoft Remote Desktop")
@@ -861,7 +861,7 @@ function icon_map() {
    "Microsoft Teams" | "Microsoft Teams (work or school)")
         icon_result=":microsoft_teams:"
         ;;
-   "Microsoft Word")
+   "Microsoft Word" | "WINWORD")
         icon_result=":microsoft_word:"
         ;;
    "Migaku")
@@ -1611,7 +1611,7 @@ function icon_map() {
    "zoom.us")
         icon_result=":zoom:"
         ;;
-   "Zotero")
+   "Zotero" | "EndNote 21" | "EndNote 2025")
         icon_result=":zotero:"
         ;;
    "Zulip")
@@ -1662,7 +1662,7 @@ function icon_map() {
     "文档" | "Highlights")
       icon_result=":pdf:"
       ;;
-    "OriginPro 9.1 32Bit" | "Origin 2021")
+    "OriginPro 9.1 64Bit" | "Origin 2021")
       icon_result=":numbers:"
       ;;
     "CodeRunner")
@@ -1730,6 +1730,12 @@ function icon_map() {
       ;;
     "Animeko")
       icon_result=":bilibili:"
+      ;;
+    "Clash Verge")
+      icon_result=":sparkle:"
+      ;;
+    "Telari")
+      icon_result=":qlmarkdown:"
       ;;
     *)
         icon_result=":default:"

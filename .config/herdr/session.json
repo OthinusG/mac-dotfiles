@@ -1,0 +1,108 @@
+{
+  "version": 3,
+  "workspaces": [
+    {
+      "id": "w1",
+      "custom_name": "Main",
+      "identity_cwd": "/Users/wqin",
+      "public_pane_numbers": {
+        "6": 9,
+        "4": 7,
+        "1": 2,
+        "2": 8,
+        "3": 4,
+        "5": 5
+      },
+      "next_public_pane_number": 10,
+      "public_tab_numbers": [
+        1,
+        2
+      ],
+      "next_public_tab_number": 3,
+      "tabs": [
+        {
+          "custom_name": "codex",
+          "layout": {
+            "Split": {
+              "direction": "Vertical",
+              "ratio": 0.16981132,
+              "first": {
+                "Split": {
+                  "direction": "Horizontal",
+                  "ratio": 0.67676765,
+                  "first": {
+                    "Pane": 1
+                  },
+                  "second": {
+                    "Pane": 2
+                  }
+                }
+              },
+              "second": {
+                "Split": {
+                  "direction": "Horizontal",
+                  "ratio": 0.48989898,
+                  "first": {
+                    "Pane": 3
+                  },
+                  "second": {
+                    "Pane": 4
+                  }
+                }
+              }
+            }
+          },
+          "panes": {
+            "1": {
+              "cwd": "/Users/wqin"
+            },
+            "2": {
+              "cwd": "/Users/wqin"
+            },
+            "4": {
+              "cwd": "/Users/wqin"
+            },
+            "3": {
+              "cwd": "/Users/wqin"
+            }
+          },
+          "zoomed": false,
+          "focused": 1,
+          "root_pane": 1
+        },
+        {
+          "custom_name": "review&run",
+          "layout": {
+            "Split": {
+              "direction": "Horizontal",
+              "ratio": 0.55050504,
+              "first": {
+                "Pane": 5
+              },
+              "second": {
+                "Pane": 6
+              }
+            }
+          },
+          "panes": {
+            "5": {
+              "cwd": "/Users/wqin"
+            },
+            "6": {
+              "cwd": "/Users/wqin"
+            }
+          },
+          "zoomed": false,
+          "focused": 5,
+          "root_pane": 5
+        }
+      ],
+      "active_tab": 1
+    }
+  ],
+  "active": 0,
+  "selected": 0,
+  "sidebar_width": 26,
+  "sidebar_section_split": 0.12962963,
+  "collapsed_space_keys": []
+}

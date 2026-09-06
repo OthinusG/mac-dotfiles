@@ -14,7 +14,7 @@ after-startup-command = [
     # JankyBorders has a built-in detection of already running process,
     # so it won't be run twice on AeroSpace restart
     #'exec-and-forget /opt/homebrew/opt/sketchybar/bin/sketchybar',
-    #'exec-and-forget borders active_color="glow(0xd943ff64)" inactive_color=0x20494d64 width=8.0'
+   'exec-and-forget borders active_color="glow(0xd943ff64)" inactive_color=0x20494d64 width=7.0'
 ]
 
 exec-on-workspace-change = [
@@ -60,12 +60,12 @@ key-mapping.preset = 'qwerty'
 #                 See: https://nikitabobko.github.io/AeroSpace/guide#assign-workspaces-to-monitors
 
 [gaps]
-inner.horizontal = 13
-inner.vertical = 13
-outer.top = [{ monitor."HDMI2.1" = 34 }, { monitor."Sculptor" = 34 }, 6]
-outer.left = 10
-outer.bottom = 9
-outer.right = 10
+inner.horizontal = 5
+inner.vertical = 5
+outer.top = [{ monitor."HDMI2.1" = 34 }, { monitor."PHL 288E2" = 34 }, 34]
+outer.left = 6
+outer.bottom = 6
+outer.right = 6
 
 # See https://nikitabobko.github.io/AeroSpace/guide#exec-env-vars
 [exec] # Again, you don't need to copy all config sections to your config.
@@ -199,12 +199,12 @@ run = ['move-node-to-workspace 1']
 # 1. Westerm
 [[on-window-detected]]
 if.app-id = 'com.github.wez.wezterm'
-run = ['move-node-to-workspace 1']
+run = ['move-node-to-workspace 2']
 
-# 1. Kitty
+# 1. ghostty
 [[on-window-detected]]
-if.app-id = 'net.kovidgoyal.kitty'
-run = ['move-node-to-workspace 1']
+if.app-id = 'com.mitchellh.ghostty'
+run = ['move-node-to-workspace 2']
 
 # 2. Warp
 [[on-window-detected]]
@@ -216,19 +216,19 @@ run = ['move-node-to-workspace 2']
 if.app-id = 'com.google.Chrome'
 run = ['move-node-to-workspace 3']
 
+# 3. Safari
+[[on-window-detected]]
+if.app-id = 'com.apple.Safari'
+run = ['move-node-to-workspace 3']
+
 # 4. Endnote
 [[on-window-detected]]
 if.app-id = 'com.ThomsonResearchSoft.EndNote'
 run = ['move-node-to-workspace 4']
 
-# 5. Ulysses
+# 5. md.obsidian
 [[on-window-detected]]
-if.app-id = 'com.ulyssesapp.mac'
-run = ['move-node-to-workspace 5']
-
-# 5. outliner
-[[on-window-detected]]
-if.app-id = 'com.omnigroup.OmniOutliner5'
+if.app-id = 'md.obsidian'
 run = ['move-node-to-workspace 5']
 
 # 6. Word
@@ -249,6 +249,11 @@ run = ['move-node-to-workspace 7']
 # 8. UUremote
 [[on-window-detected]]
 if.app-id = 'com.netease.uuremote'
+run = ['move-node-to-workspace 8']
+
+# 8. Wujie
+[[on-window-detected]]
+if.app-id = 'com.wujie.connect.mac'
 run = ['move-node-to-workspace 8']
 
 # 8. Battle.net

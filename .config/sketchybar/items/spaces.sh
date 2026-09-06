@@ -19,7 +19,8 @@ for sid in $(aerospace list-workspaces --all); do
     --subscribe space."$sid" aerospace_workspace_change display_change system_woke mouse.entered mouse.exited \
     --set space."$sid" \
     display="$monitor" \
-    padding_right=0 \
+	padding_left=0 \
+    padding_right=5 \
     icon="$sid" \
     label.padding_right=7 \
     icon.padding_left=7 \

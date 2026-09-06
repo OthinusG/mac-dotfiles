@@ -1,0 +1,6 @@
+require "core.basic"
+require "core.commands"
+require "core.ft"
+require "core.keymap"
+require "core.miscellaneous"
+require "core.symbols"

@@ -1,0 +1,5 @@
+require "lsp.lsp"
+require "lsp.plugins"
+require "lsp.completion"
+require "lsp.format"
+require "lsp.extra"

@@ -1,70 +1,462 @@
-# mac-dotfiles
-## aerospace + sketchybar + borders + karabiner + wezterm + starship + nvim
-这是我自用的 macOS dotfiles，主题风格灵感来源于 "MacOS"。
-![image](https://github.com/OthinusG/mac-dotfiles/blob/main/readmefiles/insert.png)
-绝大部分配置都“借鉴”自社区里的大佬们，我只是根据自己的使用习惯进行了一些微调和整合。最终目标是打造一个简洁、高效且能让我专注于当前任务的桌面环境。为了实现高效的音乐控制，我对状态栏的音乐控件进行了自定义，操作逻辑如下：
-| 操作          | 功能      |
-| ------------- | --------- |
-| 左键点击      | 播放/暂停 |
-| 右键点击      | 下一曲    |
-| Ctrl+右键点击 | 上一曲    |
+# mac-dotfiles-aerospace
 
-**新特性**：点击当前app标签可弹出macos系统菜单栏
-![image](https://github.com/OthinusG/mac-dotfiles/blob/main/readmefiles/insert2.png)
+## AeroSpace + SketchyBar + Ghostty + Starship + Neovim
 
-**These are my personal macOS dotfiles, with a theme inspired by "MacOS".**
-![image](https://github.com/OthinusG/mac-dotfiles/blob/main/readmefiles/insert.png)
-The vast majority of this configuration is borrowed from the work of others in the community; I've simply tweaked and integrated it to fit my own habits and workflow. The ultimate goal is to create a clean, efficient desktop environment that helps me stay focused on the task at hand.
-For more efficient music control, I have customized the status bar music widget. The controls are as follows:
+####[中文](README_CN.md) | [English](README.md)
 
-| Action             | Function       |
-| ------------------ | -------------- |
-| Left-click         | Play/Pause     |
-| Right-click        | Next Track     |
-| Ctrl + Right-click | Previous Track |
+These are my personal macOS dotfiles, which I have been using and continuously refining over time.
+
+The overall theme and interaction design remain centered around **native macOS aesthetics, minimal distraction, keyboard-first operation, automatic window placement, and a streamlined terminal workflow**.
+
+Most of the configuration is inspired by or adapted from excellent community projects. I mainly modified, simplified, and recombined them to fit my own workflow. The goal remains unchanged:
+
+> **Build a clean, efficient, predictable macOS environment with as few workflow interruptions as possible.**
+
+![Desktop](readmefiles/insert.png)
 
 
-**New Feature**: The native macOS menu bar for the active application can now be accessed by clicking the current app label.
-![image](https://github.com/OthinusG/mac-dotfiles/blob/main/readmefiles/insert2.png)
+---
 
-# Install
-1. Install homebrew and brew install packages listed down;
-2. Backup your own config files,
-3. Download config files and paste overlay file,
-4. (no use) Use karabiner to modify the function of the caps key.
-5. (Optional) Modify your weather location: `/Users/**USER_NAME**/.config/sketchybar/settings.sh`, change `WEATHER_BAIDU_QUERY="上海闵行天气"` to the location name of your area.
-6. (Optional) This music script supports Apple Music, Spotify, and YouTube Music. Spotify support is enabled by default.
-   - **To enable Apple Music**: Edit the file `~/.config/sketchybar/plugins/now_playing.sh`. Comment out the line containing `get_spotify_info` and the `process_player_info` line immediately following it. Then, uncomment the line containing `get_apple_music_info` and its corresponding `process_player_info` line below it.
-   - **To enable YouTube Music**:
-     1. Use the YouTube Music client from: [youtube-music](https://github.com/th-ch/youtube-music)
-     2. Ensure the listening port for the client is enabled.
-     3. In your `sketchybarrc` file (e.g., `/Users/wqin/.config/sketchybar/sketchybarrc`), change the line `source "$ITEM_DIR/now_playing.sh"` to `source "$ITEM_DIR/youtube-music.sh"`.
-7. The sketchybar-app-font available via Homebrew includes an incomplete set of icons. Please download the latest version from the GitHub releases and place it into /Users/usrname/Library/Fonts (a hidden folder).
-8. brew services start borders sketchybar
-# 安装说明
-1. 安装 Homebrew 和用 Brew 安装下列包；
-2. 备份您自己的配置文件；
-3. 下载配置文件并粘贴覆盖文件；
-4. （可选）利用karabiner修改caps键功能；
-5. （可选）修改天气位置：`/Users/**USER_NAME**/.config/sketchybar/settings.sh`, 把`WEATHER_BAIDU_QUERY="上海闵行天气"`改为自己区域的位置名称。
-6. （可选）本music脚本支持apple music、spotify和youtube music。默认开启spotify支持，apple music可修改在`~/.config/sketchybar/plugins/now_playing.sh`，将`get_spotify_info`行和下一行的`process_player_info`注释，并将`get_apple_music_info`和相应下一行的`process_player_info`取消注释。youtube music客户端用https://github.com/th-ch/youtube-music，并打开监听端口，将`/Users/wqin/.config/sketchybar/sketchybarrc`中`source "$ITEM_DIR/now_playing.sh"`改为`source "$ITEM_DIR/youtube-music.sh"`。
-7. homebrew 中的 sketchybar-app-font 包含的 icons 并不完整，请从 github 中 [release](https://github.com/kvndrsslr/sketchybar-app-font/releases/) 下载最新版，放置到`/Users/usrname/Library/Fonts` 中（隐藏文件夹）中。
-8. brew services start borders sketchybar
-# homebrew
+## Major Update — 2026.09
+
+1. AeroSpace now launches JankyBorders automatically on startup
+
+2. Ghostty is now the primary terminal
+
+3. SketchyBar
+
+## 4. Native macOS App Menu
+
+
+**Click the current App label to open the native macOS menu for the active application directly from SketchyBar.**
+
+![Desktop](readmefiles/insert2.png)
+
+Supported features:
+
+- Top-level menus
+- Submenus
+- Disabled menu items
+- Execute native menu commands by clicking
+- Automatically closes when the mouse leaves the popup
+
+This means that even if the native macOS menu bar is hidden, the active application's menu can still be accessed through SketchyBar.
+
+To hide the native menu bar:
+
+```text
+System Settings
+→ Control Center
+→ Automatically hide and show the menu bar
+→ Always
 ```
-brew tap FelixKratz/formulae gromgit/fuse deskflow/homebrew-tap
-brew install borders mpfr brotli ncurses btop neovim c-ares node ca-certificates nowplaying-cli fastfetch ntfs-3g-mac fd openssl@3 fzf pandoc gcc pcre2 gettext pipx git python@3.13 glow readline gmp simdjson icu4c@77 sketchybar isl sqlite libidn2 starship libmpc tree-sitter libnghttp2 unibilium libnghttp3 utf8proc libngtcp2 uvwasi libunistring wget libuv xz llvm yyjson lpeg z3 lua zsh luajit zsh-autosuggestions luv zsh-completions lz4 zsh-syntax-highlighting mpdecimal zstd jq
 
-brew install --casks nikitabobko/tap/aerospace mediosz/tap/swipeaerospace font-hack-nerd-font font-maple-mono font-sketchybar-app-font maccy mounty qlmarkdown sf-symbols wezterm input-source-pro sf-symbols
+---
+
+## 5. Music Control
+
+The music control logic from the original README is still retained.
+
+| Action | Function |
+| --- | --- |
+| Left click | Play / Pause |
+| Right click | Next track |
+| `Ctrl + Right click` | Previous track |
+
+Current active player:
+
+```text
+Apple Music
 ```
-# karabiner
-`karabiner://karabiner/assets/complex_modifications/import?url=https://raw.githubusercontent.com/OthinusG/capslox-karabiner/refs/heads/main/capslox-karabiner.json`
 
-#### Ref
-https://github.com/QianSong1/wezterm-config?tab=readme-ov-file
+`plugins/now_playing.sh` still contains support code for Spotify and MPD / `rmpc`.
+
+To switch to Spotify, edit:
+
+```text
+~/.config/sketchybar/plugins/now_playing.sh
+```
+
+Disable:
+
+```bash
+get_apple_music_info
+process_player_info
+```
+
+And enable:
+
+```bash
+get_spotify_info
+process_player_info
+```
+
+6. YouTube Music
+
+The repository still includes a separate YouTube Music item / plugin.
+
+Client:
+
+https://github.com/th-ch/youtube-music
+
+After enabling the API Server, replace this line in `sketchybarrc`:
+
+```bash
+source "$ITEM_DIR/now_playing.sh"
+```
+
+with:
+
+```bash
+source "$ITEM_DIR/youtube-music.sh"
+```
+
+YouTube Music is not enabled by default, so it is not included in the minimal Homebrew installation list.
+
+---
+
+ 7. Weather
+
+Current default:
+
+```bash
+script="$PLUGIN_DIR/weather_baidu.sh"
+```
+
+The following weather providers are retained:
+
+```text
+Baidu Weather
+NMC
+Open-Meteo
+```
+
+Configure them in:
+
+```text
+~/.config/sketchybar/settings.sh
+```
+
+For example:
+
+```bash
+WEATHER_BAIDU_QUERY="上海闵行天气"
+WEATHER_BAIDU_SRCID="4982"
+```
+
+NMC:
+
+```bash
+WEATHER_NMC_STATIONID="HIieJ"
+```
+
+Open-Meteo:
+
+```bash
+WEATHER_METEO_LATITUDE=30.2416
+WEATHER_METEO_LONGITUDE=120.1189
+```
+
+---
+
+## 8. Added Reminders Plugin
+
+The current Reminders widget reads from:
+
+```text
+Inbox
+```
+
+and displays one incomplete reminder.
+
+`Ctrl + Left Click`:
+
+```text
+Complete the currently displayed Reminder
+```
+
+`Ctrl + Right Click`:
+
+```text
+Open Reminders.app
+```
+
+---
+
+ 9. App Icons
+
+Available through Homebrew:
+
+```bash
+brew install --cask font-sketchybar-app-font
+```
+
+---
+
+# Installation
+
+## 0. System prerequisites
+
+It is recommended to install the Xcode Command Line Tools first:
+
+```bash
+xcode-select --install
+```
+
+They provide Git, Clang, and other macOS development tools, avoiding the need to install a full GCC toolchain just for Neovim / Tree-sitter.
+
+Before using SketchyBar / AeroSpace, make sure the following option is enabled:
+
+```text
+System Settings
+→ Desktop & Dock
+→ Displays have separate Spaces
+```
+
+---
+
+## 1. Install from Homebrew
+
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+### Formulae
+
+```bash
+brew tap FelixKratz/formulae
+
+brew install \
+  sketchybar \
+  borders \
+  jq \
+  starship \
+  zsh-syntax-highlighting \
+  zsh-autosuggestions \
+  zsh-completions
+```
+
+### Casks / Fonts
+
+```bash
+brew install --cask \
+  nikitabobko/tap/aerospace \
+  ghostty \
+  font-hack-nerd-font \
+  font-jetbrains-mono-nerd-font \
+  font-sketchybar-app-font \
+  sf-symbols
+```
+
+### Optional: Karabiner
+
+Only required if you use the Hyper Layer:
+
+```bash
+brew install --cask karabiner-elements
+```
+
+---
+
+### Optional: Neovim
+
+The repository contains a complete Neovim configuration.
+
+Minimum installation:
+
+```bash
+brew install neovim
+```
+
+To fully use Telescope, the native fzf extension, and Markdown Preview in the current Neovim configuration, the following packages are also recommended:
+
+```bash
+brew install \
+  fd \
+  ripgrep \
+  cmake \
+  node \
+  yarn
+```
+
+## 2. Clone
+
+**Remember to back up your existing configuration beforehand.**
+
+```bash
+git clone https://github.com/OthinusG/mac-dotfiles.git ~/mac-dotfiles && \
+rm -rf ~/.config && \
+cp -R ~/mac-dotfiles/.config ~/.config && \
+cp ~/mac-dotfiles/.aerospace.toml ~/.aerospace.toml && \
+cp ~/mac-dotfiles/.zshrc ~/.zshrc && \
+cp ~/mac-dotfiles/.zprofile ~/.zprofile
+```
+
+
+---
+
+# Start
+
+## SketchyBar
+
+```bash
+brew services start sketchybar
+```
+
+Reload:
+
+```bash
+sketchybar --reload
+```
+
+---
+
+## AeroSpace
+
+The configuration already contains:
+
+```toml
+start-at-login = true
+```
+
+Simply launch AeroSpace.app normally.
+
+AeroSpace will automatically run:
+
+```text
+borders
+```
+
+---
+
+# Per-machine Settings
+
+After copying the configuration, check at least the following settings.
+
+---
+
+## 1. Display names
+
+The current `.aerospace.toml` contains:
+
+```text
+HDMI2.1
+PHL 288E2
+```
+
+Check the displays on your own machine:
+
+```bash
+aerospace list-monitors
+```
+
+Then modify:
+
+```toml
+[gaps]
+outer.top = [
+  { monitor."YOUR DISPLAY" = 3 },
+  3
+]
+```
+
+---
+
+## 2. Network interface
+
+Current value:
+
+```bash
+INTERFACE="en1"
+```
+
+File:
+
+```text
+~/.config/sketchybar/plugins/network_rates.sh
+```
+
+Check available interfaces:
+
+```bash
+networksetup -listallhardwareports
+```
+
+Then change it according to your machine:
+
+```text
+en0
+en1
+...
+```
+
+---
+
+## 3. Weather
+
+File:
+
+```text
+~/.config/sketchybar/settings.sh
+```
+
+Modify:
+
+```bash
+WEATHER_BAIDU_QUERY
+WEATHER_BAIDU_SRCID
+WEATHER_NMC_STATIONID
+WEATHER_METEO_LATITUDE
+WEATHER_METEO_LONGITUDE
+```
+
+---
+
+## 4. Proxy
+
+The current proxy port in `.zshrc` is:
+
+```text
+127.0.0.1:7897
+```
+
+If Clash / Shadowrocket / Mihomo uses a different port, modify:
+
+```bash
+proxy() {
+    ...
+}
+```
+
+---
+
+# References / Credits
+
+Thanks to the following projects and configuration authors:
+
+- [AeroSpace](https://github.com/nikitabobko/AeroSpace)
+- [SketchyBar](https://github.com/FelixKratz/SketchyBar)
+- [JankyBorders](https://github.com/FelixKratz/JankyBorders)
+- [Ghostty](https://ghostty.org/)
+- [Starship](https://starship.rs/)
+- [Herdr](https://herdr.dev/)
+- [sketchybar-app-font](https://github.com/kvndrsslr/sketchybar-app-font)
+- [QianSong1/wezterm-config](https://github.com/QianSong1/wezterm-config)
+- [clear668866x6/nvim](https://github.com/clear668866x6/nvim)
+- [patricorgi/dotfiles](https://github.com/patricorgi/dotfiles)
+- [manishprivet/.dotfiles](https://github.com/manishprivet/.dotfiles)
+- [sergii-dudar/dotfiles](https://github.com/sergii-dudar/dotfiles)
+- [Sinjhin/SketchyMenu](https://github.com/Sinjhin/SketchyMenu)
+- [th-ch/youtube-music](https://github.com/th-ch/youtube-music)
+
+Original reference video:
+
 https://www.youtube.com/watch?v=e34qllePuoc
-https://github.com/patricorgi/dotfiles
-https://github.com/clear668866x6/nvim?tab=readme-ov-file
-https://github.com/manishprivet/.dotfiles/tree/main
-https://github.com/sergii-dudar/dotfiles
-https://github.com/Sinjhin/SketchyMenu/tree/main/sketchybar
+
+---
+
+## Disclaimer
+
+These are personal dotfiles, not a plug-and-play macOS distribution.
+
+Some settings are intentionally opinionated and hardware-specific. Read the configuration before copying it and keep only the parts that fit your own workflow.

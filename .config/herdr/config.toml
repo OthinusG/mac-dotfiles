@@ -1,0 +1,28 @@
+onboarding = false
+[ui]
+status_indicators = "symbols"
+agent_panel_sort = "priority"
+show_agent_labels_on_pane_borders = true
+
+[theme]
+name = "terminal"
+auto_switch = false
+
+[ui.toast]
+delivery = "system"
+delay_seconds = 1
+
+[terminal]
+new_cwd = "follow"
+
+[session]
+resume_agents_on_restore = true
+
+[worktrees]
+directory = "~/.herdr/worktrees"
+
+[experimental]
+pane_history = false
+reveal_hidden_cursor_for_cjk_ime = true
+cjk_ime_agents = ["claude", "codex"]
+switch_ascii_input_source_in_prefix = true

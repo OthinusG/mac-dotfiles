@@ -6,7 +6,10 @@
 
 source "$CONFIG_DIR/icons.sh"
 source "$CONFIG_DIR/colors.sh"
-
+PLAYER_LABLE_COLOR=$BAR_COLOR
+PLAYER_PLAY_ICON_COLOR=$BAR_COLOR
+PLAYER_PAUSE_ICON_COLOR=$BAR_COLOR
+PLAYER_STOP_ICON_COLOR=$BAR_COLOR
 CACHE_DIR="$HOME/dotfiles/temp"
 CACHE_FILE="$CACHE_DIR/cache.now_playing.envs"
 
@@ -139,15 +142,15 @@ function process_player_info() {
     fi
 }
 
-#get_apple_music_info
-#process_player_info
+get_apple_music_info
+process_player_info
 
 #get_mpd_info
 #process_player_info
 
 # echo "STATUS: $STATUS" >/tmp/logs.txt
-get_spotify_info
-process_player_info
+#get_spotify_info
+#process_player_info
 
 # in case no any player in status - playing
 if [[ "$STATUS" == "paused" ]]; then
